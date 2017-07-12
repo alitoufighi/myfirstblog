@@ -1,14 +1,7 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
-
 from django.shortcuts import render
-
-# from django.http import HttpResponse
-# Create your views here.
-
-# def hello(request):
-# 	text = "<b>Hello</b>"
-# 	return HttpResponse(text)
+from django.utils import timezone
+from .models import Post
 
 def post_list(request):
-	return render(request, 'testapp/post_list.html', {})
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    return render(request, 'testapp/post_list.html', {'posts': posts})

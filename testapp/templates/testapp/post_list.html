@@ -5,7 +5,19 @@
 	<title>Inter_Iran Official Website</title>
 </head>
 <body>
+
+
 	<h1>Testing</h1>
 	<p>Text</p>
+
+	{% for post in posts %}
+    	<div>
+    		<p>_____________________________</p>
+			<p>published: {{ post.published_date }}</p>
+        	<h1><a href="">{{ post.title }}</a></h1>
+        	<p>{{ post.text|linebreaksbr }}</p>
+    	</div>
+	{% endfor %}
+
 </body>
 </html>
