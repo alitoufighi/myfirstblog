@@ -86,6 +86,19 @@ DATABASES = {
     }
 }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'alitou.mysql.pythonanywhere-services.com',
+#         # 'NAME': 'TRYDJANGO',
+#         'USER':'alitou',
+#         'PASSWORD':'8106Aj256',
+#         'PORT':'3306',
+#         'HOST': 'alitou.mysql.pythonanywhere-services.com',
+#     }
+# }
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
